@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Exequiel Echevarria | Full Stack Engineer &amp; Software Architect</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            /* Primary theme colors */
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #eff6ff;
+            --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
+            
+            /* Neutral colors */
+            --bg-body: #0f172a;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #475569;
+            --text-light: #64748b;
+            --border-color: #e2e8f0;
+            --chip-bg: #f1f5f9;
+            --chip-text: #334155;
+            
+            /* Sidebar background */
+            --sidebar-bg: #f8fafc;
+            --header-bg: #ffffff;
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            --radius-main: 16px;
+        }
+
+        /* Language Toggle Display Rules */
+        html[lang="es"] .lang-en {
+            display: none !important;
+        }
+        html[lang="en"] .lang-es {
+            display: none !important;
+        }
+
+        /* Dark Mode Theme Variables */
+        [data-theme="dark"] {
+            --bg-body: #090d16;
+            --bg-card: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #cbd5e1;
+            --text-light: #94a3b8;
+            --border-color: #334155;
+            --chip-bg: #0f172a;
+            --chip-text: #e2e8f0;
+            --sidebar-bg: #111827;
+            --header-bg: #1e293b;
+        }
+
+        /* Color Preset Variations */
+        [data-accent="emerald"] {
+            --primary: #10b981;
+            --primary-dark: #047857;
+            --primary-light: #ecfdf5;
+            --primary-gradient: linear-gradient(135deg, #064e3b 0%, #10b981 50%, #34d399 100%);
+        }
+        [data-accent="purple"] {
+            --primary: #8b5cf6;
+            --primary-dark: #6d28d9;
+            --primary-light: #f5f3ff;
+            --primary-gradient: linear-gradient(135deg, #4c1d95 0%, #8b5cf6 50%, #a78bfa 100%);
+        }
+        [data-accent="cyan"] {
+            --primary: #06b6d4;
+            --primary-dark: #0e7490;
+            --primary-light: #ecfeff;
+            --primary-gradient: linear-gradient(135deg, #164e63 0%, #06b6d4 50%, #38bdf8 100%);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 15px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Toolbar controls (No-Print) */
+        .toolbar {
+            max-width: 960px;
+            margin: 0 auto 24px auto;
+            background: rgba(30, 41, 59, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 12px 24px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            color: #ffffff;
+        }
+
+        .toolbar-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .lang-btn {
+            padding: 5px 14px;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .lang-btn.active {
+            background: var(--primary-gradient);
+            color: #ffffff;
+            border-color: transparent;
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+        }
+
+        .accent-dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: transform 0.2s;
+        }
+        .accent-dot:hover {
+            transform: scale(1.2);
+        }
+        .accent-dot.active {
+            border-color: #ffffff;
+        }
+        .accent-blue { background: #2563eb; }
+        .accent-emerald { background: #10b981; }
+        .accent-purple { background: #8b5cf6; }
+        .accent-cyan { background: #06b6d4; }
+
+        /* CV Sheet Layout */
+        .cv-container {
+            max-width: 960px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: var(--radius-main);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        /* Header Section */
+        .cv-header {
+            background: var(--primary-gradient);
+            color: #ffffff;
+            padding: 36px 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cv-header::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .header-flex {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-avatar {
+            width: 115px;
+            height: 115px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
+            border: 3px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+            flex-shrink: 0;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .header-content {
+            flex-grow: 1;
+        }
+
+        .header-title-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(8px);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .cv-header h1 {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
+
+        .cv-header .job-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.92);
+            margin-bottom: 18px;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 24px;
+            font-size: 12.5px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.95);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .contact-item:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .contact-item i {
+            width: 26px;
+            height: 26px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        /* Two Column Main Body */
+        .cv-body {
+            display: grid;
+            grid-template-columns: 285px 1fr;
+            min-height: 700px;
+        }
+
+        /* Sidebar Column */
+        .sidebar {
+            background-color: var(--sidebar-bg);
+            padding: 32px 24px;
+            border-right: 1px solid var(--border-color);
+        }
+
+        /* Main Content Column */
+        .main-content {
+            padding: 32px 36px;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 28px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 13.5px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid var(--border-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .section-title i {
+            font-size: 14px;
+        }
+
+        /* Summary text */
+        .summary-text {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        /* Skills Chips & Categories */
+        .skill-group {
+            margin-bottom: 16px;
+        }
+
+        .skill-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-group-title {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .chip-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .chip {
+            background-color: var(--chip-bg);
+            color: var(--chip-text);
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3.5px 9px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        .chip.highlight {
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            border-color: rgba(37, 99, 235, 0.25);
+        }
+
+        /* Timeline Items for Experience and Projects */
+        .timeline {
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 6px;
+            bottom: 6px;
+            width: 2px;
+            background-color: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 22px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -20px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            border: 3px solid var(--bg-card);
+            box-shadow: 0 0 0 1px var(--primary);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-bottom: 4px;
+        }
+
+        .item-title {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .item-role {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .item-period {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-light);
+            background: var(--chip-bg);
+            padding: 2px 8px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .item-description {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            margin-top: 6px;
+        }
+
+        .item-bullets {
+            list-style: none;
+            margin-top: 8px;
+        }
+
+        .item-bullets li {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 16px;
+            line-height: 1.5;
+        }
+
+        .item-bullets li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Education & Certs Cards */
+        .edu-card {
+            background-color: var(--chip-bg);
+            border: 1px solid var(--border-color);
+            padding: 11px 14px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .edu-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .edu-title {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .edu-subtitle {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .score-badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-size: 10px;
+            font-weight: 700;
+            padding: 1px 6px;
+            border-radius: 4px;
+            margin-left: 4px;
+        }
+
+        /* Language Badges */
+        .lang-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            background-color: var(--chip-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+        .lang-card:last-child {
+            margin-bottom: 0;
+        }
+        .lang-name {
+            font-weight: 700;
+            color: var(--text-main);
+        }
+        .lang-level {
+            font-size: 10.5px;
+            font-weight: 600;
+            color: var(--primary);
+            background: var(--primary-light);
+            padding: 2px 8px;
+            border-radius: 12px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px 5px;
+            }
+            .cv-body {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .cv-header {
+                padding: 30px 24px;
+            }
+            .main-content {
+                padding: 28px 24px;
+            }
+        }
+
+        /* PRINT STYLESHEET OPTIMIZATION (Ultra-clean PDF export) */
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 6mm 8mm;
+            }
+
+            body {
+                background: #ffffff !important;
+                color: #1e293b !important;
+                padding: 0 !important;
+                font-size: 10.5pt;
+            }
+
+            .toolbar {
+                display: none !important;
+            }
+
+            .cv-container {
+                box-shadow: none !important;
+                border: none !important;
+                max-width: 100% !important;
+                border-radius: 0 !important;
+                background: #ffffff !important;
+            }
+
+            .cv-header {
+                background: #1e3a8a !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                color: #ffffff !important;
+                padding: 22px 28px !important;
+            }
+
+            .cv-header h1 {
+                font-size: 22pt !important;
+            }
+
+            .cv-body {
+                grid-template-columns: 250px 1fr !important;
+                background: #ffffff !important;
+            }
+
+            .sidebar {
+                background-color: #f8fafc !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                padding: 18px 16px !important;
+                border-right: 1px solid #cbd5e1 !important;
+            }
+
+            .main-content {
+                padding: 18px 22px !important;
+            }
+
+            .section {
+                margin-bottom: 16px !important;
+                break-inside: avoid;
+            }
+
+            .timeline-item {
+                break-inside: avoid;
+                margin-bottom: 14px !important;
+            }
+
+            .chip {
+                border: 1px solid #cbd5e1 !important;
+                background: #f1f5f9 !important;
+                color: #0f172a !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .chip.highlight {
+                background: #dbeafe !important;
+                color: #1e40af !important;
+            }
+
+            a {
+                text-decoration: none !important;
+                color: inherit !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Interactive Toolbar -->
+    <div class="toolbar">
+        <div class="toolbar-group">
+            <button type="button" class="btn btn-primary" onclick="window.print()">
+                <i class="fa-solid fa-print"></i> 
+                <span class="lang-es">Imprimir / PDF</span>
+                <span class="lang-en">Print / PDF</span>
+            </button>
+            <button type="button" class="btn btn-secondary" id="themeToggleBtn" onclick="toggleTheme()">
+                <i class="fa-solid fa-moon" id="themeIcon"></i> 
+                <span id="themeText">
+                    <span class="lang-es">Modo Oscuro</span>
+                    <span class="lang-en">Dark Mode</span>
+                </span>
+            </button>
+        </div>
+
+        <div class="toolbar-group">
+            <span style="font-size: 12px; opacity: 0.8; margin-right: 4px;">Language / Idioma:</span>
+            <button type="button" class="lang-btn active" id="btn-es" onclick="setLanguage('es')">ES</button>
+            <button type="button" class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+        </div>
+
+        <div class="toolbar-group">
+            <span style="font-size: 12px; opacity: 0.8; margin-right: 4px;">Accent:</span>
+            <div class="accent-dot accent-blue active" onclick="setAccent('blue')" title="Azul / Blue"></div>
+            <div class="accent-dot accent-emerald" onclick="setAccent('emerald')" title="Esmeralda / Emerald"></div>
+            <div class="accent-dot accent-purple" onclick="setAccent('purple')" title="Púrpura / Purple"></div>
+            <div class="accent-dot accent-cyan" onclick="setAccent('cyan')" title="Cian / Cyan"></div>
+        </div>
+    </div>
+
+    <!-- Curriculum Vitae Document -->
+    <div class="cv-container">
+        
+        <!-- Header -->
+        <header class="cv-header">
+            <div class="header-flex">
+                <img src="profile.png" alt="Exequiel Echevarria" class="profile-avatar">
+                <div class="header-content">
+                    <span class="header-title-badge">Curriculum Vitae</span>
+                    <h1>EXEQUIEL ECHEVARRIA</h1>
+                    <div class="job-title">
+                        <span class="lang-es">FULL STACK ENGINEER &amp; ENTERPRISE SYSTEMS ARCHITECT</span>
+                        <span class="lang-en">FULL STACK ENGINEER &amp; ENTERPRISE SYSTEMS ARCHITECT</span>
+                    </div>
+                    
+                    <div class="contact-grid">
+                        <span class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i> Rosario, Santa Fe, Argentina
+                        </span>
+                        <a href="tel:+543416874786" class="contact-item">
+                            <i class="fa-solid fa-phone"></i> +54 341 6874786
+                        </a>
+                        <a href="mailto:exemetal@hotmail.com" class="contact-item">
+                            <i class="fa-solid fa-envelope"></i> exemetal@hotmail.com
+                        </a>
+                        <a href="https://github.com/ExeDevCentral" target="_blank" class="contact-item">
+                            <i class="fa-brands fa-github"></i> github.com/ExeDevCentral
+                        </a>
+                        <a href="https://www.linkedin.com/in/exequiel-echevarria/" target="_blank" class="contact-item">
+                            <i class="fa-brands fa-linkedin"></i> linkedin.com/in/exequiel-echevarria
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Two Column Main Layout -->
+        <div class="cv-body">
+            
+            <!-- Sidebar: Skills, Education, Languages -->
+            <aside class="sidebar">
+                
+                <!-- Technical Stack Section -->
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-code"></i> 
+                        <span class="lang-es">Stack Técnico</span>
+                        <span class="lang-en">Technical Stack</span>
+                    </h2>
+
+                    <!-- Frontend -->
+                    <div class="skill-group">
+                        <div class="skill-group-title">Frontend &amp; UI/UX</div>
+                        <div class="chip-container">
+                            <span class="chip highlight">React</span>
+                            <span class="chip highlight">Next.js</span>
+                            <span class="chip highlight">TypeScript</span>
+                            <span class="chip">Tailwind CSS</span>
+                            <span class="chip">State Mgmt</span>
+                            <span class="chip">Framer Motion</span>
+                            <span class="chip">HTML5 / CSS3</span>
+                            <span class="chip">Design Systems</span>
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="skill-group">
+                        <div class="skill-group-title">Backend &amp; Data Engineering</div>
+                        <div class="chip-container">
+                            <span class="chip highlight">Python</span>
+                            <span class="chip highlight">C++</span>
+                            <span class="chip">OwlEyeEngine</span>
+                            <span class="chip highlight">SQL Architecture</span>
+                            <span class="chip">PostgreSQL</span>
+                            <span class="chip">MySQL</span>
+                            <span class="chip">SQL Server</span>
+                            <span class="chip">Modelado Relacional</span>
+                            <span class="chip">Query Optimization</span>
+                        </div>
+                    </div>
+
+                    <!-- Infrastructure -->
+                    <div class="skill-group">
+                        <div class="skill-group-title">Infra, Cloud &amp; Networking</div>
+                        <div class="chip-container">
+                            <span class="chip highlight">Cisco Networking</span>
+                            <span class="chip">Linux Admin</span>
+                            <span class="chip">RESTful APIs</span>
+                            <span class="chip">Webhooks</span>
+                            <span class="chip">Git / GitHub</span>
+                            <span class="chip">Resend / Gateways</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages Section -->
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-language"></i> 
+                        <span class="lang-es">Idiomas</span>
+                        <span class="lang-en">Languages</span>
+                    </h2>
+                    <div class="lang-card">
+                        <span class="lang-name">Español</span>
+                        <span class="lang-level">
+                            <span class="lang-es">Nativo</span>
+                            <span class="lang-en">Native</span>
+                        </span>
+                    </div>
+                    <div class="lang-card">
+                        <span class="lang-name">English</span>
+                        <span class="lang-level">
+                            <span class="lang-es">Profesional (C1)</span>
+                            <span class="lang-en">Full Professional (C1)</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills & Leadership Section -->
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-brain"></i> 
+                        <span class="lang-es">Competencias Clave</span>
+                        <span class="lang-en">Core Competencies</span>
+                    </h2>
+                    <div class="chip-container">
+                        <span class="chip">Análisis Funcional</span>
+                        <span class="chip">Trazabilidad Operativa</span>
+                        <span class="chip">Liderazgo de Equipos</span>
+                        <span class="chip">Metodologías Ágiles</span>
+                        <span class="chip">Resolución de Problemas</span>
+                        <span class="chip">Arquitectura SaaS</span>
+                    </div>
+                </div>
+
+                <!-- Educación y Certificaciones -->
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-graduation-cap"></i> 
+                        <span class="lang-es">Educación &amp; Certs</span>
+                        <span class="lang-en">Education &amp; Certs</span>
+                    </h2>
+
+                    <div class="edu-card">
+                        <div class="edu-title">Networking Basics</div>
+                        <div class="edu-subtitle">
+                            Cisco Networking Academy 
+                            <span class="score-badge">Score: 86/100</span>
+                        </div>
+                        <div style="font-size: 10.5px; color: var(--text-light); margin-top: 4px;">
+                            <span class="lang-es">Febrero 2026</span>
+                            <span class="lang-en">February 2026</span>
+                        </div>
+                    </div>
+
+                    <div class="edu-card">
+                        <div class="edu-title">
+                            <span class="lang-es">Técnico Industrial</span>
+                            <span class="lang-en">Industrial Technician</span>
+                        </div>
+                        <div class="edu-subtitle">
+                            <span class="lang-es">Formación en Procesos, Sistemas y Física</span>
+                            <span class="lang-en">Foundation in Systems, Physics &amp; Process Engineering</span>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+                
+                <!-- Perfil Profesional / Executive Summary -->
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-user-gear"></i> 
+                        <span class="lang-es">Perfil Profesional</span>
+                        <span class="lang-en">Executive Profile</span>
+                    </h2>
+                    <p class="summary-text lang-es">
+                        Desarrollador Software Full-Stack y Arquitecto de Sistemas con sólida formación técnica industrial. Especializado en el diseño e implementación de plataformas SaaS Enterprise escalables (React, Next.js, TypeScript), microservicios de alto rendimiento (Python, C++) y modelos relacionales complejos (SQL, PostgreSQL, MySQL). Destaco por combinar liderazgo operativo, análisis funcional de procesos y desarrollo de soluciones automatizadas e integración de Inteligencia Artificial para resolver problemas críticos de negocio, eliminar cuellos de botella y optimizar la trazabilidad de datos.
+                    </p>
+                    <p class="summary-text lang-en">
+                        Full-Stack Software Engineer &amp; Enterprise Systems Architect with a strong industrial engineering foundation. Specialized in architecting and building high-performance Enterprise SaaS platforms (React, Next.js, TypeScript), efficient backend engines (Python, C++), and optimized relational database schemas (SQL, PostgreSQL, MySQL). Proven track record of leveraging operational leadership, functional analysis, and AI-driven automation to solve complex technical bottlenecks, streamline enterprise data pipelines, and drive high-impact operational efficiency.
+                    </p>
+                </section>
+
+                <!-- Proyectos Destacados (GitHub) -->
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-diagram-project"></i> 
+                        <span class="lang-es">Proyectos Destacados &amp; Arquitectura</span>
+                        <span class="lang-en">Featured Projects &amp; Architecture</span>
+                    </h2>
+
+                    <div class="timeline">
+                        
+                        <!-- Proyecto 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="item-header">
+                                <div>
+                                    <div class="item-title">
+                                        <span class="lang-es">Plataforma SaaS Enterprise &amp; Sistemas Web Interactivos</span>
+                                        <span class="lang-en">Enterprise SaaS Platform &amp; Interactive Web Systems</span>
+                                    </div>
+                                    <div class="item-role">Lead Full-Stack Architect &amp; Developer</div>
+                                </div>
+                            </div>
+                            
+                            <!-- ES Bullets -->
+                            <ul class="item-bullets lang-es">
+                                <li>Arquitectura y desarrollo de dashboards interactivos de alta concurrencia utilizando React, Next.js, TypeScript y Tailwind CSS con diseño de experiencia premium.</li>
+                                <li>Implementación de control de acceso basado en roles (RBAC - Admin/Cliente), gestión de estados complejos en tiempo real e integración de pasarelas de pago internacionales (PayPal / Mercado Pago).</li>
+                                <li>Diseño de arquitecturas orientadas a eventos mediante APIs RESTful, Webhooks y automatización de correos transaccionales con latencia inferior al segundo.</li>
+                            </ul>
+
+                            <!-- EN Bullets -->
+                            <ul class="item-bullets lang-en">
+                                <li>Architected and engineered high-concurrency interactive dashboards and enterprise web apps using React, Next.js, TypeScript, and Tailwind CSS.</li>
+                                <li>Implemented granular Role-Based Access Control (RBAC), real-time state synchronization, and secure enterprise payment gateway integrations (PayPal, Mercado Pago).</li>
+                                <li>Built event-driven API integrations, RESTful services, Webhooks, and transactional email pipelines achieving sub-second execution latency.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Proyecto 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="item-header">
+                                <div>
+                                    <div class="item-title">
+                                        <span class="lang-es">OwlEyeEngine &amp; Frameworks de Automatización con IA</span>
+                                        <span class="lang-en">OwlEyeEngine &amp; AI Automation Frameworks</span>
+                                    </div>
+                                    <div class="item-role">Core Systems Creator</div>
+                                </div>
+                            </div>
+
+                            <!-- ES Bullets -->
+                            <ul class="item-bullets lang-es">
+                                <li>Ingeniería de motores y scripts de alto rendimiento en C++ y Python orientados a la optimización algorítmica y procesamiento intensivo de datos.</li>
+                                <li>Desarrollo de pipelines automatizados integrando modelos de Inteligencia Artificial, reduciendo la carga operativa manual de datos en más de un 60%.</li>
+                                <li>Optimización de estructura de memoria y algoritmos para garantizar ejecuciones continuas de alta fiabilidad.</li>
+                            </ul>
+
+                            <!-- EN Bullets -->
+                            <ul class="item-bullets lang-en">
+                                <li>Engineered high-throughput data processing engines in C++ and Python optimized for algorithmic efficiency and execution speed.</li>
+                                <li>Automated complex enterprise workflows by integrating AI-driven pipelines, reducing manual processing overhead by over 60%.</li>
+                                <li>Applied advanced memory management and query optimizations to deliver resilient backend utility suites.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Experiencia Laboral -->
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-briefcase"></i> 
+                        <span class="lang-es">Experiencia Laboral</span>
+                        <span class="lang-en">Work Experience</span>
+                    </h2>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="item-header">
+                                <div>
+                                    <div class="item-title">
+                                        <span class="lang-es">Líder de Procesos, Trazabilidad &amp; Gestión de Datos</span>
+                                        <span class="lang-en">Operations, Traceability &amp; Data Systems Lead</span>
+                                    </div>
+                                    <div class="item-role">
+                                        <span class="lang-es">Sector Operativo &amp; Logístico</span>
+                                        <span class="lang-en">Operational &amp; Logistics Sector</span>
+                                    </div>
+                                </div>
+                                <span class="item-period">2+ <span class="lang-es">Años</span><span class="lang-en">Years</span></span>
+                            </div>
+
+                            <!-- ES Bullets -->
+                            <ul class="item-bullets lang-es">
+                                <li>Liderazgo y supervisión directa de equipos operativos multidisciplinarios, garantizando el 100% de cumplimiento en metas operativas y estándares de seguridad.</li>
+                                <li>Diseño e implementación de sistemas de monitoreo y trazabilidad total de stock e inventarios en tiempo real, erradicando inconsistencias de datos y aumentando la eficiencia logística en un 35%.</li>
+                                <li>Diagnóstico y resolución de cuellos de botella operativos mediante análisis de datos estructurado y desarrollo de herramientas de software personalizadas.</li>
+                            </ul>
+
+                            <!-- EN Bullets -->
+                            <ul class="item-bullets lang-en">
+                                <li>Led cross-functional operational teams, driving compliance, safety protocols, and consistently exceeding 100% operational target metrics.</li>
+                                <li>Architected real-time tracking and inventory data traceability workflows, eliminating stock discrepancies and improving supply chain throughput by 35%.</li>
+                                <li>Analyzed operational bottlenecks through data modeling and engineered custom software tools to enable data-driven executive decision-making.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+
+    </div>
+
+    <!-- Interactive Script -->
+    <script>
+        function setLanguage(lang) {
+            const html = document.documentElement;
+            html.setAttribute('lang', lang);
+
+            const btnEs = document.getElementById('btn-es');
+            const btnEn = document.getElementById('btn-en');
+
+            if (lang === 'en') {
+                btnEn.classList.add('active');
+                btnEs.classList.remove('active');
+            } else {
+                btnEs.classList.add('active');
+                btnEn.classList.remove('active');
+            }
+        }
+
+        function toggleTheme() {
+            const body = document.documentElement;
+            const currentTheme = body.getAttribute('data-theme');
+            const themeIcon = document.getElementById('themeIcon');
+
+            if (currentTheme === 'dark') {
+                body.removeAttribute('data-theme');
+                themeIcon.className = 'fa-solid fa-moon';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fa-solid fa-sun';
+            }
+        }
+
+        function setAccent(color) {
+            const body = document.documentElement;
+            body.setAttribute('data-accent', color);
+            
+            document.querySelectorAll('.accent-dot').forEach(dot => {
+                dot.classList.remove('active');
+            });
+            document.querySelector(`.accent-${color}`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
