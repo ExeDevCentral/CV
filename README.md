@@ -37,7 +37,7 @@
 
 <br/>
 
-## ⚡ The Manifesto // "Querer Ser Alguien en la Vida"
+## ⚡ The Manifesto // "Excelencia Como Estándar"
 
 <div align="center">
   <img src="./assets/mindset-card.svg" alt="The Relentless Mindset" width="100%" />
@@ -45,13 +45,14 @@
 
 <br/>
 
-> **"El código mediocre sobra en el mundo. Lo que falta es gente dispuesta a dejarse la piel por la excelencia, obsesionada con resolver problemas reales y comprometida con evolucionar cada día sin poner una sola excusa."**
+> **"No creo en la mediocridad como destino. Cada día trato de escribir código un poco mejor que el de ayer, entender un poco más a fondo por qué las cosas funcionan, y no conformarme con la primera solución que anda."**
 
-No creo en el conformismo ni en las soluciones a medias. Mi motor diario se basa en cuatro leyes fundamentales:
-1. **Disciplina Innegociable:** La motivación es pasajera; los sistemas, los hábitos y el trabajo duro diario son invencibles.
-2. **Deconstrucción por Primeros Principios:** Ante la incertidumbre o problemas complejos, no hay pánico. Se aísla el ruido, se desglosa el problema hasta sus partes atómicas más elementales y se resuelve con compostura quirúrgica.
-3. **Arquitectura con Propósito:** Cada línea de código, cada modelo relacional y cada microservicio debe entregar valor tangible, escalabilidad y cero deuda técnica.
-4. **Mentalidad de Crecimiento Compuesto (1% Diario):** Si hoy sabés lo mismo que ayer, estás retrocediendo. El aprendizaje continuo es un estilo de vida.
+Todavía tengo mucho para aprender. Lo que sí tengo claro es cómo encaro ese camino:
+
+1. **Disciplina antes que motivación:** Los días de inspiración no alcanzan. Lo que me sostiene es la constancia, incluso cuando no tengo ganas.
+2. **Ir a la raíz del problema:** Cuando algo me supera, no lo evito — lo desarmo en partes más chicas hasta entenderlo, aunque me lleve tiempo.
+3. **Cuidar lo que construyo:** Trato de que cada línea de código y cada decisión de arquitectura tenga sentido, no solo que "funcione".
+4. **Un poco mejor cada día:** Si hoy sé lo mismo que ayer, siento que me quedé atrás. Prefiero aprender de a poco pero todos los días.
 
 ---
 

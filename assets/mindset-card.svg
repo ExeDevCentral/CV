@@ -52,11 +52,11 @@
   </text>
 
   <!-- Quote Lines -->
-  <text x="44" y="74" fill="#f8fafc" font-size="15" font-weight="600" class="quote-text">
-    «El talento sin disciplina obsesiva es solo una promesa vacía.
+  <text x="44" y="74" fill="#f8fafc" font-size="14.5" font-weight="600" class="quote-text">
+    «No creo en la mediocridad como destino. Escribir código mejor que el de ayer,
   </text>
-  <text x="44" y="98" fill="#94a3b8" font-size="14.5" font-weight="500" class="quote-text">
-    Mi compromiso es construir sistemas indestructibles y ser un 1% mejor cada maldito día.»
+  <text x="44" y="98" fill="#94a3b8" font-size="14" font-weight="500" class="quote-text">
+    entender a fondo cómo funcionan las cosas y no conformarme con la primera solución.»
   </text>
 
   <!-- Footer signature -->
