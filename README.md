@@ -192,13 +192,13 @@ Todavía tengo mucho para aprender. Lo que sí tengo claro es cómo encaro ese c
 ## 📊 Live GitHub Telemetry & Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ExeDevCentral&show_icons=true&theme=tokyonight&hide_border=true&bg_color=090d16&title_color=38bdf8&text_color=94a3b8&icon_color=8b5cf6" alt="Exequiel's GitHub Stats" height="175" />
+  <img src="https://github-stats-extended.vercel.app/api?username=ExeDevCentral&show_icons=true&theme=tokyonight&hide_border=true&bg_color=090d16&title_color=38bdf8&text_color=94a3b8&icon_color=8b5cf6" alt="Exequiel's GitHub Stats" height="175" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=ExeDevCentral&theme=tokyonight&hide_border=true&background=090d16&ring=38bdf8&fire=38bdf8&currStreakNum=f8fafc&sideNums=94a3b8&sideLabels=94a3b8&dates=64748b" alt="Streak Stats" height="175" />
 </div>
 
 <div align="center">
   <br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ExeDevCentral&layout=compact&theme=tokyonight&hide_border=true&bg_color=090d16&title_color=38bdf8&text_color=94a3b8" alt="Top Languages" />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=ExeDevCentral&layout=compact&theme=tokyonight&hide_border=true&bg_color=090d16&title_color=38bdf8&text_color=94a3b8" alt="Top Languages" />
 </div>
 
 ---
