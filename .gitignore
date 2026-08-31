@@ -1,2 +1,15 @@
 node_modules/
 .DS_Store
+
+# Vercel
+.vercel
+.env*.local
+.env
+
+# Editor & System
+.vscode/
+Thumbs.db
+*.log
+
+
+.vercel
