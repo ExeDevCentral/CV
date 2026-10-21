@@ -37,7 +37,7 @@
 
 <br/>
 
-## ⚡ The Manifesto // "Excelencia Como Estándar"
+## ⚡ The Manifesto // "Excellence as the Baseline"
 
 <div align="center">
   <img src="./assets/mindset-card.svg" alt="The Relentless Mindset" width="100%" />
@@ -45,14 +45,14 @@
 
 <br/>
 
-> **"No creo en la mediocridad como destino. Cada día trato de escribir código un poco mejor que el de ayer, entender un poco más a fondo por qué las cosas funcionan, y no conformarme con la primera solución que anda."**
+> **"Mediocrity is an active choice I refuse to make. Every single day, I strive to write code that surpasses yesterday's benchmark, deeply investigate underlying kernel mechanics rather than superficial abstractions, and never settle for the first solution that merely executes."**
 
-Todavía tengo mucho para aprender. Lo que sí tengo claro es cómo encaro ese camino:
+Principles governing my engineering discipline and execution trajectory:
 
-1. **Disciplina antes que motivación:** Los días de inspiración no alcanzan. Lo que me sostiene es la constancia, incluso cuando no tengo ganas.
-2. **Ir a la raíz del problema:** Cuando algo me supera, no lo evito — lo desarmo en partes más chicas hasta entenderlo, aunque me lleve tiempo.
-3. **Cuidar lo que construyo:** Trato de que cada línea de código y cada decisión de arquitectura tenga sentido, no solo que "funcione".
-4. **Un poco mejor cada día:** Si hoy sé lo mismo que ayer, siento que me quedé atrás. Prefiero aprender de a poco pero todos los días.
+1. **Discipline over Transient Motivation:** Ephemeral bursts of inspiration are insufficient. Sustained engineering velocity is forged through deliberate, unyielding daily consistency.
+2. **First-Principles Problem Decomposition:** When confronted with complex systems failure, I decompose the problem space into fundamental axioms until reaching deterministic understanding.
+3. **Architectural Stewardship:** Every line of code, algorithmic choice, and schema invariant must justify its existence with measurable intent and resilience.
+4. **Relentless Compounding Growth:** Continuous, compound technical learning is non-negotiable. If my engineering depth today matches yesterday's, velocity has stalled.
 
 ---
 
@@ -86,7 +86,7 @@ Todavía tengo mucho para aprender. Lo que sí tengo claro es cómo encaro ese c
       <ul>
         <li><b>Core Languages:</b> C++, Python (Data Processing &amp; Custom Engines).</li>
         <li><b>OwlEyeEngine:</b> Algorithmic optimization, memory management, batch automation.</li>
-        <li><b>AI Pipeline Automation:</b> Reducción de más del 60% de sobrecarga operativa manual mediante pipelines con IA.</li>
+        <li><b>AI Pipeline Automation:</b> Over 60% reduction in manual operational overhead through automated LLM batch pipelines.</li>
         <li><b>Reliability:</b> Robust error boundaries, structured logging, continuous execution runtime.</li>
       </ul>
     </td>
@@ -96,7 +96,7 @@ Todavía tengo mucho para aprender. Lo que sí tengo claro es cómo encaro ese c
       <h3>🧠 3. Relational Data Architecture</h3>
       <ul>
         <li><b>Engines:</b> PostgreSQL, MySQL, SQL Server.</li>
-        <li><b>Engineering:</b> Modelado relacional avanzado, normalización vs. desnormalización estratégica.</li>
+        <li><b>Engineering:</b> Advanced relational modeling, third normal form (3NF) and strategic read-optimized denormalization.</li>
         <li><b>Optimization:</b> Query optimization, index strategies (B-Tree, GIN), execution plan analysis.</li>
         <li><b>Data Integrity:</b> ACID compliance, strict constraints, transactional safety.</li>
       </ul>
@@ -282,3 +282,4 @@ vercel deploy --prod
   </p>
 
 </div>
+
