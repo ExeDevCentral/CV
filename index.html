@@ -577,10 +577,120 @@
             border-radius: 12px;
         }
 
-        /* Responsive Breakpoints */
+        /* Compact Mode for Mobile / Tablet / Quick Review */
+        body.compact-mode .secondary-detail,
+        body.compact-mode .item-bullets li:nth-child(n+3) {
+            display: none !important;
+        }
+        body.compact-mode .section {
+            margin-bottom: 22px !important;
+        }
+        body.compact-mode .compact-badge-indicator {
+            display: inline-flex !important;
+        }
+        .compact-badge-indicator {
+            display: none;
+            align-items: center;
+            gap: 6px;
+            background: rgba(37, 99, 235, 0.15);
+            color: var(--primary);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 999px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Mobile Quick Navigation Floating Bar */
+        .mobile-quick-nav {
+            display: none;
+            position: fixed;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 99;
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 999px;
+            padding: 6px 10px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+            max-width: 95vw;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        [data-theme="light"] .mobile-quick-nav {
+            background: rgba(255, 255, 255, 0.92);
+            border-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+        }
+        .mobile-quick-nav a {
+            color: #f8fafc;
+            text-decoration: none;
+            font-size: 11.5px;
+            font-weight: 600;
+            padding: 6px 10px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.2s ease;
+        }
+        [data-theme="light"] .mobile-quick-nav a {
+            color: #1e293b;
+        }
+        .mobile-quick-nav a:hover,
+        .mobile-quick-nav a:active {
+            background: var(--primary);
+            color: #ffffff !important;
+        }
+
+        /* Responsive Breakpoints: Tablet & Large Mobile */
+        @media (max-width: 1024px) {
+            body {
+                padding: 14px 10px 70px 10px;
+            }
+            .cv-container {
+                max-width: 100%;
+                border-radius: 12px;
+            }
+            .cv-body {
+                grid-template-columns: 260px 1fr;
+            }
+            .cv-header {
+                padding: 24px 20px;
+            }
+            .main-content {
+                padding: 24px 20px;
+            }
+            .mobile-quick-nav {
+                display: flex;
+                gap: 4px;
+            }
+        }
+
+        /* Mobile Breakpoints (Phones & Phablets) */
         @media (max-width: 768px) {
             body {
-                padding: 10px 5px;
+                padding: 8px 6px 75px 6px;
+            }
+            .toolbar {
+                position: sticky;
+                top: 0;
+                z-index: 50;
+                padding: 8px 10px;
+                border-radius: 12px;
+                flex-wrap: wrap;
+                gap: 8px;
+                justify-content: center;
+                backdrop-filter: blur(10px);
+            }
+            .toolbar-group {
+                flex-wrap: wrap;
+                justify-content: center;
             }
             .cv-body {
                 grid-template-columns: 1fr;
@@ -588,12 +698,71 @@
             .sidebar {
                 border-right: none;
                 border-bottom: 1px solid var(--border-color);
+                padding: 22px 18px;
+            }
+            .header-flex {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                gap: 16px;
+            }
+            .profile-avatar {
+                width: 96px;
+                height: 96px;
+                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
             }
             .cv-header {
-                padding: 30px 24px;
+                padding: 24px 16px;
+            }
+            .cv-header h1 {
+                font-size: clamp(1.5rem, 5.5vw, 2rem);
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+                width: 100%;
+                justify-content: stretch;
+            }
+            .contact-item {
+                justify-content: center;
+                padding: 10px 14px;
+                min-height: 44px;
+                border-radius: 8px;
+                background: rgba(255, 255, 255, 0.08);
             }
             .main-content {
-                padding: 28px 24px;
+                padding: 20px 16px;
+            }
+            .mobile-quick-nav {
+                display: flex;
+            }
+            .btn {
+                min-height: 40px;
+                padding: 7px 12px;
+                font-size: 12.5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 4px 4px 80px 4px;
+            }
+            .cv-header {
+                padding: 20px 12px;
+            }
+            .sidebar, .main-content {
+                padding: 16px 12px;
+            }
+            .timeline-item {
+                padding-left: 20px;
+            }
+            .timeline-item::before {
+                left: -7px;
+                width: 13px;
+                height: 13px;
+            }
+            .item-header h3 {
+                font-size: 15px;
             }
         }
 
@@ -699,6 +868,13 @@
                     <span class="lang-en">Dark Mode</span>
                 </span>
             </button>
+            <button type="button" class="btn btn-secondary" id="compactToggleBtn" onclick="toggleCompactMode()" title="Alternar versión resumida para celular/tablet">
+                <i class="fa-solid fa-compress" id="compactIcon"></i> 
+                <span id="compactText">
+                    <span class="lang-es">Modo Corto</span>
+                    <span class="lang-en">Compact</span>
+                </span>
+            </button>
         </div>
 
         <div class="toolbar-group">
@@ -722,7 +898,7 @@
         <!-- Header -->
         <header class="cv-header">
             <div class="header-flex">
-                <img src="profile.png" alt="Exequiel Echevarria" class="profile-avatar">
+                <img src="profile.png" alt="Exequiel Echevarria" class="profile-avatar" width="115" height="115" loading="lazy" decoding="async">
                 <div class="header-content">
                     <span class="header-title-badge">Curriculum Vitae</span>
                     <h1>EXEQUIEL ECHEVARRIA</h1>
@@ -731,7 +907,7 @@
                         <span class="lang-en">FULL-STACK DEVELOPER</span>
                     </div>
                     
-                    <div class="contact-grid">
+                    <div class="contact-grid" id="contacto">
                         <span class="contact-item">
                             <i class="fa-solid fa-location-dot"></i> Rosario, Santa Fe, Argentina
                         </span>
@@ -759,7 +935,7 @@
             <aside class="sidebar">
                 
                 <!-- Technical Stack Section -->
-                <div class="section">
+                <div class="section" id="habilidades">
                     <h2 class="section-title">
                         <i class="fa-solid fa-code"></i> 
                         <span class="lang-es">Stack Técnico</span>
@@ -910,7 +1086,7 @@
             <main class="main-content">
                 
                 <!-- Perfil Profesional / Executive Summary -->
-                <section class="section">
+                <section class="section" id="perfil">
                     <h2 class="section-title">
                         <i class="fa-solid fa-user-gear"></i> 
                         <span class="lang-es">Perfil Profesional</span>
@@ -925,7 +1101,7 @@
                 </section>
 
                 <!-- Proyectos Personales -->
-                <section class="section">
+                <section class="section" id="proyectos">
                     <h2 class="section-title">
                         <i class="fa-solid fa-diagram-project"></i> 
                         <span class="lang-es">Proyectos Personales</span>
@@ -1002,7 +1178,7 @@
                 </section>
 
                 <!-- Experiencia Laboral -->
-                <section class="section">
+                <section class="section" id="experiencia">
                     <h2 class="section-title">
                         <i class="fa-solid fa-briefcase"></i> 
                         <span class="lang-es">Experiencia Laboral</span>
