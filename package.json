@@ -13,6 +13,6 @@
   "type": "commonjs",
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
-    "puppeteer-core": "^25.6.0"
+    "puppeteer-core": "^25.16.0"
   }
 }
