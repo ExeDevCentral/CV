@@ -5,7 +5,7 @@
   <br/><br/>
 
   <!-- Quick Action Badges -->
-  <a href="https://cvechevarria.vercel.app" target="_blank">
+  <a href="https://cv-xi-swart.vercel.app" target="_blank">
     <img src="https://img.shields.io/badge/LIVE_CV-WEBSITE-2563eb?style=for-the-badge&logo=vercel&logoColor=white" alt="Live CV" />
   </a>
   <a href="./Exequiel_Echevarria_CV_ES.pdf" target="_blank">
@@ -24,16 +24,33 @@
   <br/><br/>
   
   <p align="center">
-    <b>Full Stack Engineer</b> • <b>Enterprise Systems Architect</b> • <b>Relentless Builder</b>
+    <b>Full-Stack Solutions Engineer</b> • <b>Software Architect</b> • <b>Relentless Builder</b>
   </p>
 
-  <sub>📍 Rosario, Santa Fe, Argentina • 🚀 Building high-concurrency software &amp; scalable infrastructure every single day.</sub>
+  <sub>📍 Rosario, Santa Fe, Argentina • 🚀 Transformando experiencia operativa y madurez en soluciones de software de alto impacto.</sub>
 
 </div>
 
 <br/>
 
 <img src="./assets/divider.svg" width="100%" />
+
+<br/>
+
+## 🎯 Manifiesto Estratégico: Vender Soluciones, No Sólo Experiencia
+
+> **"La experiencia, por sí sola, ya no es suficiente. El mercado laboral moderno no compra años pasivos de antigüedad: invierte en soluciones concretas a problemas costosos. Convierto la madurez profesional y el rigor operativo en una ventaja competitiva decisiva para las organizaciones."**
+
+Aprender y aplicar las 6 palancas estratégicas para el mercado contemporáneo:
+
+1. 🎯 **Entender por qué la experiencia aislada no basta:** El valor reside en el retorno de inversión (ROI), la resolución de cuellos de botella y la entrega continua de valor técnico.
+2. 💼 **Superar el error común de la búsqueda de empleo:** Evitar anclarse en paradigmas legados; adoptar una mentalidad activa de constructor (*builder*) que produce software moderno todos los días.
+3. 📄 **Transformar el CV para vender soluciones:** Presentar métricas medibles de impacto: reducción de tareas manuales de 5 horas a minutos con C++/Python y disminución del 35% de errores operativos.
+4. 🔗 **Ecosistema abierto y verificable:** Más de 30 repositorios públicos y funcionales en [GitHub (github.com/ExeDevCentral)](https://github.com/ExeDevCentral), auditables por cualquier equipo técnico.
+5. 🚀 **La madurez como ventaja competitiva:** Templanza bajo presión, liderazgo de equipos humanos multidisciplinarios, diagnóstico de causa raíz y responsabilidad integral.
+6. 📚 **Demostrar aprendizaje y adaptación continua:** Certificación oficial Cisco Networking Academy (Score 86/100, 2026), dominio de React 19, TypeScript estricto, C++ y pipelines de IA.
+
+---
 
 <br/>
 

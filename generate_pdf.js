@@ -1,11 +1,35 @@
 const puppeteer = require('puppeteer-core');
 const path = require('path');
+const fs = require('fs');
 
 (async () => {
   try {
+    // Detect executable path across platforms
+    let executablePath = '';
+    if (process.platform === 'win32') {
+      const winPaths = [
+        'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
+        'C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe',
+        'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+        'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
+      ];
+      executablePath = winPaths.find((p) => fs.existsSync(p)) || winPaths[0];
+    } else {
+      const linuxPaths = [
+        '/usr/bin/chromium',
+        '/usr/bin/chromium-browser',
+        '/usr/bin/google-chrome',
+        '/usr/bin/google-chrome-stable'
+      ];
+      executablePath = linuxPaths.find((p) => fs.existsSync(p)) || '/usr/bin/chromium';
+    }
+
+    console.log(`Using browser binary: ${executablePath}`);
+
     const browser = await puppeteer.launch({
-      executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
-      headless: true
+      executablePath,
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
     });
 
     const page = await browser.newPage();

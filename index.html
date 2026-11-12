@@ -577,6 +577,84 @@
             border-radius: 12px;
         }
 
+        /* Solutions & Impact Manifesto Card */
+        .solutions-manifesto {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(16, 185, 129, 0.06) 100%);
+            border: 1px solid rgba(37, 99, 235, 0.25);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-bottom: 24px;
+            transition: all 0.3s ease;
+        }
+        [data-theme="dark"] .solutions-manifesto {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.14) 0%, rgba(16, 185, 129, 0.09) 100%);
+            border-color: rgba(59, 130, 246, 0.35);
+        }
+        .manifesto-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .manifesto-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--primary);
+            color: #ffffff;
+            font-size: 10.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+        .manifesto-lead {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-main);
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+        .manifesto-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        @media (max-width: 680px) {
+            .manifesto-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .manifesto-pill {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            transition: transform 0.15s ease, border-color 0.15s ease;
+        }
+        .manifesto-pill:hover {
+            border-color: var(--primary);
+            transform: translateY(-1px);
+        }
+        .manifesto-pill strong {
+            font-size: 11.5px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .manifesto-pill span {
+            font-size: 11px;
+            color: var(--text-muted);
+            line-height: 1.45;
+        }
+
         /* Compact Mode for Mobile / Tablet / Quick Review */
         body.compact-mode .secondary-detail,
         body.compact-mode .item-bullets li:nth-child(n+3) {
@@ -900,11 +978,14 @@
             <div class="header-flex">
                 <img src="profile.png" alt="Exequiel Echevarria" class="profile-avatar" width="115" height="115" loading="lazy" decoding="async">
                 <div class="header-content">
-                    <span class="header-title-badge">Curriculum Vitae</span>
+                    <span class="header-title-badge">
+                        <span class="lang-es">SOLUCIONES DE SOFTWARE &amp; ARQUITECTURA</span>
+                        <span class="lang-en">SOFTWARE SOLUTIONS &amp; ARCHITECTURE</span>
+                    </span>
                     <h1>EXEQUIEL ECHEVARRIA</h1>
                     <div class="job-title">
-                        <span class="lang-es">DESARROLLADOR FULL-STACK</span>
-                        <span class="lang-en">FULL-STACK DEVELOPER</span>
+                        <span class="lang-es">FULL-STACK SOLUTIONS ENGINEER &amp; SOFTWARE ARCHITECT</span>
+                        <span class="lang-en">FULL-STACK SOLUTIONS ENGINEER &amp; SOFTWARE ARCHITECT</span>
                     </div>
                     
                     <div class="contact-grid" id="contacto">
@@ -1085,43 +1166,127 @@
             <!-- Main Content Area -->
             <main class="main-content">
                 
+                <!-- Manifiesto Estratégico: Vender Soluciones, no solo experiencia -->
+                <div class="solutions-manifesto">
+                    <div class="manifesto-header">
+                        <span class="manifesto-badge">
+                            <i class="fa-solid fa-bullseye"></i>
+                            <span class="lang-es">Propuesta de Valor &amp; Ventaja Competitiva</span>
+                            <span class="lang-en">Value Proposition &amp; Competitive Edge</span>
+                        </span>
+                        <span style="font-size: 11px; color: var(--text-light); font-weight: 600;">
+                            <span class="lang-es">Enfoque Orientado a Soluciones</span>
+                            <span class="lang-en">Solutions-Driven Approach</span>
+                        </span>
+                    </div>
+
+                    <div class="manifesto-lead lang-es">
+                        <strong>"La experiencia, por sí sola, ya no es suficiente:</strong> Las empresas no compran años pasivos de antigüedad; invierten en soluciones concretas a problemas costosos. Convierto la madurez profesional y el rigor operativo en una ventaja competitiva decisiva para el negocio."
+                    </div>
+                    <div class="manifesto-lead lang-en">
+                        <strong>"Experience alone is no longer enough:</strong> Companies do not hire passive years of tenure; they invest in concrete solutions to expensive bottlenecks. I turn mature operational expertise and industrial discipline into a decisive competitive advantage."
+                    </div>
+
+                    <div class="manifesto-grid">
+                        <div class="manifesto-pill">
+                            <strong>
+                                <i class="fa-solid fa-chart-line" style="color: var(--primary);"></i>
+                                <span class="lang-es">1. Vender Soluciones, no sólo Años</span>
+                                <span class="lang-en">1. Selling Solutions Over Years</span>
+                            </strong>
+                            <span class="lang-es">Foco prioritario en retorno de inversión (ROI), eliminación de ineficiencias y arquitectura de software que produce valor desde el día uno.</span>
+                            <span class="lang-en">Relentless focus on business ROI, operational efficiency, and software architecture delivering measurable value from day one.</span>
+                        </div>
+
+                        <div class="manifesto-pill">
+                            <strong>
+                                <i class="fa-solid fa-hammer" style="color: #10b981;"></i>
+                                <span class="lang-es">2. Mentalidad Ágil de Constructor</span>
+                                <span class="lang-en">2. Relentless Builder Mindset</span>
+                            </strong>
+                            <span class="lang-es">Creación diaria de código y arquitecturas modernas, evitando el error común de anclarse en dogmas tecnológicos obsoletos.</span>
+                            <span class="lang-en">Continuous daily shipping of modern, clean code, avoiding the common pitfall of clinging to outdated legacy habits.</span>
+                        </div>
+
+                        <div class="manifesto-pill">
+                            <strong>
+                                <i class="fa-solid fa-bolt" style="color: #e5a93c;"></i>
+                                <span class="lang-es">3. Impacto Cuantificable y Automatización</span>
+                                <span class="lang-en">3. Measurable Impact &amp; Automation</span>
+                            </strong>
+                            <span class="lang-es">Reducción de tareas manuales de 5 horas a minutos desatendidos con C++/Python y sistemas de trazabilidad que bajaron 35% de errores.</span>
+                            <span class="lang-en">Reduced manual workflows from ~5 hours to unattended minutes with C++/Python, and lowered inventory errors by 35%.</span>
+                        </div>
+
+                        <div class="manifesto-pill">
+                            <strong>
+                                <i class="fa-brands fa-github" style="color: #8b5cf6;"></i>
+                                <span class="lang-es">4. Ecosistema Verificable (+30 Repos)</span>
+                                <span class="lang-en">4. Verifiable Ecosystem (30+ Repos)</span>
+                            </strong>
+                            <span class="lang-es">Tracción demostrable en GitHub (github.com/ExeDevCentral): código abierto auditado, SaaS en producción, motores y pipelines.</span>
+                            <span class="lang-en">Verifiable public track record on GitHub (github.com/ExeDevCentral): production SaaS, low-level engines, and automated pipelines.</span>
+                        </div>
+
+                        <div class="manifesto-pill">
+                            <strong>
+                                <i class="fa-solid fa-shield-halved" style="color: #06b6d4;"></i>
+                                <span class="lang-es">5. Madurez como Ventaja Competitiva</span>
+                                <span class="lang-en">5. Senior Maturity as an Asset</span>
+                            </strong>
+                            <span class="lang-es">Liderazgo de equipos humanos, templanza en momentos de crisis, diagnóstico de causa raíz y confiabilidad operativa integral.</span>
+                            <span class="lang-en">Cross-functional team leadership, composure under pressure, root-cause diagnostics, and reliable execution.</span>
+                        </div>
+
+                        <div class="manifesto-pill">
+                            <strong>
+                                <i class="fa-solid fa-graduation-cap" style="color: #ec4899;"></i>
+                                <span class="lang-es">6. Aprendizaje y Adaptación Continua</span>
+                                <span class="lang-en">6. Continuous Learning &amp; Agility</span>
+                            </strong>
+                            <span class="lang-es">Certificación Cisco Networking (Score 86/100, 2026), React 19, TypeScript estricto, Python e integración de modelos de Inteligencia Artificial.</span>
+                            <span class="lang-en">Cisco Networking Academy Certified (Score 86/100, 2026), React 19, Strict TypeScript, Python, and applied AI.</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Perfil Profesional / Executive Summary -->
                 <section class="section" id="perfil">
                     <h2 class="section-title">
                         <i class="fa-solid fa-user-gear"></i> 
-                        <span class="lang-es">Perfil Profesional</span>
-                        <span class="lang-en">Executive Profile</span>
+                        <span class="lang-es">Perfil Profesional &amp; Enfoque Estratégico</span>
+                        <span class="lang-en">Executive Profile &amp; Strategic Approach</span>
                     </h2>
                     <p class="summary-text lang-es">
-                        Desarrollador Full-Stack autodidacta con formación técnica industrial. Construyo aplicaciones web completas con React, Next.js y TypeScript en el frontend, y Python o C++ en el backend, sobre bases de datos relacionales (PostgreSQL, MySQL, SQL Server). Tengo experiencia liderando equipos operativos y diseñando sistemas de trazabilidad en entornos de alta exigencia, lo que me da una perspectiva práctica a la hora de traducir problemas reales en soluciones concretas de software.
+                        Desarrollador Full-Stack &amp; Ingeniero de Soluciones con sólida formación técnica industrial. Me especializo en construir aplicaciones web de alto rendimiento con React 19, Next.js y TypeScript en el frontend, y motores de automatización en Python o C++ en el backend, integrados con bases de datos relacionales robustas (PostgreSQL, MySQL, SQL Server). Cuento con trayectoria liderando equipos operativos multidisciplinarios y diseñando sistemas de trazabilidad en entornos exigentes. Mi diferencial radica en transformar la madurez operativa y el pensamiento crítico en soluciones de software de retorno inmediato, reduciendo costos operativos y automatizando procesos críticos.
                     </p>
                     <p class="summary-text lang-en">
-                        Self-taught Full-Stack Developer with an industrial technical background. I build complete web applications using React, Next.js, and TypeScript on the frontend, and Python or C++ on the backend, on top of relational databases (PostgreSQL, MySQL, SQL Server). I have hands-on experience leading operational teams and designing data traceability systems under real-world pressure, which gives me a practical lens for turning actual business problems into working software.
+                        Full-Stack Solutions Engineer &amp; Software Architect with a strong industrial technical foundation. I specialize in building high-impact web applications with React 19, Next.js, and TypeScript on the frontend, and automation engines in Python or C++ on the backend, integrated with robust relational databases (PostgreSQL, MySQL, SQL Server). Proven experience leading cross-functional operational teams and designing traceability systems under demanding conditions. My key differentiator is transforming operational maturity and critical thinking into software solutions with immediate business ROI, cutting costs and automating mission-critical workflows.
                     </p>
                 </section>
 
-                <!-- Proyectos Personales -->
+                <!-- Proyectos Personales & Soluciones de Ingeniería -->
                 <section class="section" id="proyectos">
                     <h2 class="section-title">
                         <i class="fa-solid fa-diagram-project"></i> 
-                        <span class="lang-es">Proyectos Personales</span>
-                        <span class="lang-en">Personal Projects</span>
+                        <span class="lang-es">Soluciones de Ingeniería &amp; Proyectos Destacados</span>
+                        <span class="lang-en">Engineering Solutions &amp; Featured Projects</span>
                     </h2>
 
                     <div class="timeline">
                         
-                        <!-- Proyecto 1 -->
+                        <!-- Proyecto 1: SaaS Comercial -->
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="item-header">
                                 <div>
                                     <div class="item-title">
-                                        <span class="lang-es">Plataforma SaaS — Dashboard con RBAC y Pagos</span>
-                                        <span class="lang-en">SaaS Platform — Dashboard with RBAC &amp; Payments</span>
+                                        <span class="lang-es">Plataformas SaaS de Gestión Comercial &amp; Pagos (MultiTiendas / SportManager)</span>
+                                        <span class="lang-en">Commercial SaaS Platforms &amp; Payments (MultiTiendas / SportManager)</span>
                                     </div>
                                     <div class="item-role">
-                                        <span class="lang-es">Proyecto personal · </span>
-                                        <span class="lang-en">Personal project · </span>
+                                        <span class="lang-es">Arquitectura en Producción · </span>
+                                        <span class="lang-en">Production Architecture · </span>
                                         <a href="https://github.com/ExeDevCentral" target="_blank" style="color: inherit; text-decoration: underline;">github.com/ExeDevCentral</a>
                                     </div>
                                 </div>
@@ -1129,31 +1294,31 @@
                             
                             <!-- ES Bullets -->
                             <ul class="item-bullets lang-es">
-                                <li>Dashboard web completo con React, Next.js, TypeScript y Tailwind CSS: autenticación, rutas protegidas y UI responsiva.</li>
-                                <li>Control de acceso por roles (RBAC) con vistas diferenciadas Admin/Cliente y sincronización de estado en tiempo real vía React Query.</li>
-                                <li>Integración de pasarelas de pago (PayPal y Mercado Pago) y envío de correos transaccionales con Resend mediante webhooks.</li>
+                                <li>Desarrollo integral con React 19, Next.js, TypeScript y Tailwind CSS: arquitectura modular, control de acceso basado en roles (RBAC) y vistas diferenciadas Admin/Cliente.</li>
+                                <li>Integración de pasarelas de pago (Mercado Pago, PayPal, Stripe) y orquestación de correos transaccionales vía webhooks con Resend (&lt;1s de latencia).</li>
+                                <li>Base de datos relacional PostgreSQL con modelado 3NF, optimización de consultas y sincronización de estado reactivo en tiempo real con React Query.</li>
                             </ul>
 
                             <!-- EN Bullets -->
                             <ul class="item-bullets lang-en">
-                                <li>Full web dashboard built with React, Next.js, TypeScript, and Tailwind CSS: authentication, protected routes, and responsive UI.</li>
-                                <li>Role-Based Access Control (RBAC) with separate Admin/Client views and real-time state sync via React Query.</li>
-                                <li>Payment gateway integrations (PayPal and Mercado Pago) and transactional email delivery via Resend using webhooks.</li>
+                                <li>Full architecture built with React 19, Next.js, TypeScript, and Tailwind CSS: modular design, Role-Based Access Control (RBAC), and differentiated Admin/Client workspaces.</li>
+                                <li>Payment gateway integrations (Mercado Pago, PayPal, Stripe) with webhook handling and transactional email delivery via Resend (&lt;1s latency).</li>
+                                <li>Relational PostgreSQL architecture with 3NF modeling, query optimization, and real-time state synchronization via React Query.</li>
                             </ul>
                         </div>
 
-                        <!-- Proyecto 2 -->
+                        <!-- Proyecto 2: OwlEyeEngine & AI -->
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="item-header">
                                 <div>
                                     <div class="item-title">
-                                        <span class="lang-es">OwlEyeEngine — Motor de Automatización en C++/Python</span>
-                                        <span class="lang-en">OwlEyeEngine — C++/Python Automation Engine</span>
+                                        <span class="lang-es">OwlEyeEngine — Motor de Automatización en C++/Python &amp; Pipelines de IA</span>
+                                        <span class="lang-en">OwlEyeEngine — C++/Python Automation Engine &amp; AI Pipelines</span>
                                     </div>
                                     <div class="item-role">
-                                        <span class="lang-es">Proyecto personal · </span>
-                                        <span class="lang-en">Personal project · </span>
+                                        <span class="lang-es">Motor de Alto Rendimiento · </span>
+                                        <span class="lang-en">High-Throughput Engine · </span>
                                         <a href="https://github.com/ExeDevCentral" target="_blank" style="color: inherit; text-decoration: underline;">github.com/ExeDevCentral</a>
                                     </div>
                                 </div>
@@ -1161,16 +1326,48 @@
 
                             <!-- ES Bullets -->
                             <ul class="item-bullets lang-es">
-                                <li>Motor de procesamiento de datos en C++ y Python con foco en velocidad de ejecución y eficiencia de memoria.</li>
-                                <li>Pipeline de automatización que integra modelos de IA para clasificar y procesar lotes de datos que antes requerían revisión manual — pasando de ~5 hs de trabajo manual a ejecución desatendida en minutos.</li>
-                                <li>Arquitectura orientada a tareas programadas con manejo de errores y logs estructurados para debugging en producción.</li>
+                                <li>Motor de procesamiento de datos en C++ y Python diseñado para maximizar la velocidad de ejecución y minimizar la huella de memoria en procesos batch.</li>
+                                <li>Pipeline de automatización que integra modelos de IA para clasificar y procesar lotes de datos que antes demandaban ~5 horas de trabajo manual, reduciéndolos a ejecución desatendida en minutos.</li>
+                                <li>Arquitectura orientada a tareas programadas con manejo estricto de excepciones y telemetría estructurada para monitoreo en producción.</li>
                             </ul>
 
                             <!-- EN Bullets -->
                             <ul class="item-bullets lang-en">
-                                <li>Data processing engine in C++ and Python focused on execution speed and memory efficiency.</li>
-                                <li>Automation pipeline integrating AI models to classify and process data batches that previously required manual review — reducing ~5 hours of manual work to unattended execution in minutes.</li>
-                                <li>Task-scheduler architecture with structured error handling and logs for production-level debugging.</li>
+                                <li>High-throughput data engine in C++ and Python built for maximum computational speed and minimal memory footprint in batch processes.</li>
+                                <li>Automation pipeline integrating AI models to classify and process data batches that previously consumed ~5 hours of manual work, slashed to unattended minutes.</li>
+                                <li>Task-scheduler architecture with robust exception boundaries and structured logging for production debugging.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Proyecto 3: Polymath Zero -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="item-header">
+                                <div>
+                                    <div class="item-title">
+                                        <span class="lang-es">Polymath Zero — Workbench de Sistemas Formales &amp; Algoritmos Simbólicos</span>
+                                        <span class="lang-en">Polymath Zero — Formal Systems Workbench &amp; Symbolic CAS</span>
+                                    </div>
+                                    <div class="item-role">
+                                        <span class="lang-es">Ingeniería &amp; Verificación Axiomática · </span>
+                                        <span class="lang-en">Engineering &amp; Formal Verification · </span>
+                                        <a href="https://github.com/ExeDevCentral" target="_blank" style="color: inherit; text-decoration: underline;">github.com/ExeDevCentral</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ES Bullets -->
+                            <ul class="item-bullets lang-es">
+                                <li>Plataforma web de aprendizaje formal riguroso basada en Astro 5, React 19, TypeScript estricto y renderizado matemático KaTeX.</li>
+                                <li>Kernel CAS interactivo con evaluación simbólica, cálculo diferencial/integral, límites con verificación épsilon-delta y visualizador reactivo SVG en tiempo real.</li>
+                                <li>Suite de tests automatizados con Node.js Test Runner y persistencia de estado en cliente sin dependencias pesadas.</li>
+                            </ul>
+
+                            <!-- EN Bullets -->
+                            <ul class="item-bullets lang-en">
+                                <li>Rigorous formal learning platform powered by Astro 5, React 19, strict TypeScript, and KaTeX symbolic rendering.</li>
+                                <li>Interactive simulated CAS kernel with symbolic evaluation, differential/integral calculus, epsilon-delta limits, and reactive SVG visualizer.</li>
+                                <li>Automated test suite using Node.js native test runner and client-side state persistence with zero external bloat.</li>
                             </ul>
                         </div>
 
