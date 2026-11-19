@@ -684,76 +684,12 @@
         /* Mobile Quick Navigation Floating Bar */
         .mobile-quick-nav {
             display: none;
-            position: fixed;
-            bottom: 12px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 99;
-            background: rgba(15, 23, 42, 0.88);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 999px;
-            padding: 6px 10px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
-            max-width: 95vw;
-            overflow-x: auto;
-            white-space: nowrap;
-        }
-        [data-theme="light"] .mobile-quick-nav {
-            background: rgba(255, 255, 255, 0.92);
-            border-color: rgba(0, 0, 0, 0.1);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
-        }
-        .mobile-quick-nav a {
-            color: #f8fafc;
-            text-decoration: none;
-            font-size: 11.5px;
-            font-weight: 600;
-            padding: 6px 10px;
-            border-radius: 999px;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            transition: all 0.2s ease;
-        }
-        [data-theme="light"] .mobile-quick-nav a {
-            color: #1e293b;
-        }
-        .mobile-quick-nav a:hover,
-        .mobile-quick-nav a:active {
-            background: var(--primary);
-            color: #ffffff !important;
-        }
-
-        /* Responsive Breakpoints: Tablet & Large Mobile */
-        @media (max-width: 1024px) {
-            body {
-                padding: 14px 10px 70px 10px;
-            }
-            .cv-container {
-                max-width: 100%;
-                border-radius: 12px;
-            }
-            .cv-body {
-                grid-template-columns: 260px 1fr;
-            }
-            .cv-header {
-                padding: 24px 20px;
-            }
-            .main-content {
-                padding: 24px 20px;
-            }
-            .mobile-quick-nav {
-                display: flex;
-                gap: 4px;
-            }
         }
 
         /* Mobile Breakpoints (Phones & Phablets) */
         @media (max-width: 768px) {
             body {
-                padding: 8px 6px 75px 6px;
+                padding: 8px 6px 88px 6px;
             }
             .toolbar {
                 position: sticky;
@@ -761,14 +697,67 @@
                 z-index: 50;
                 padding: 8px 10px;
                 border-radius: 12px;
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
+                overflow-x: auto;
                 gap: 8px;
-                justify-content: center;
-                backdrop-filter: blur(10px);
+                justify-content: space-between;
+                backdrop-filter: blur(12px);
+            }
+            .toolbar-group:last-child {
+                display: none;
             }
             .toolbar-group {
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
+                flex-shrink: 0;
+            }
+            .mobile-quick-nav {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 4px;
+                position: fixed;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                z-index: 99;
+                background: rgba(15, 23, 42, 0.94);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border: 1px solid rgba(255, 255, 255, 0.16);
+                border-radius: 18px;
+                padding: 6px;
+                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+            }
+            .mobile-quick-nav a,
+            .mobile-quick-nav button {
+                color: #f8fafc;
+                background: transparent;
+                border: 1px solid transparent;
+                text-decoration: none;
+                font-size: 10.5px;
+                font-weight: 700;
+                padding: 6px 2px;
+                min-height: 46px;
+                border-radius: 12px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 justify-content: center;
+                gap: 3px;
+                cursor: pointer;
+                font-family: inherit;
+                transition: all 0.2s ease;
+            }
+            .mobile-quick-nav a i,
+            .mobile-quick-nav button i {
+                font-size: 14px;
+                color: var(--primary);
+            }
+            .mobile-quick-nav .m-cta {
+                background: var(--primary-gradient);
+                color: #ffffff !important;
+            }
+            .mobile-quick-nav .m-cta i {
+                color: #ffffff;
             }
             .cv-body {
                 grid-template-columns: 1fr;
@@ -811,13 +800,10 @@
             .main-content {
                 padding: 20px 16px;
             }
-            .mobile-quick-nav {
-                display: flex;
-            }
             .btn {
-                min-height: 40px;
-                padding: 7px 12px;
-                font-size: 12.5px;
+                min-height: 38px;
+                padding: 6px 10px;
+                font-size: 12px;
             }
         }
 
@@ -1401,8 +1387,43 @@
 
     </div>
 
+    <!-- Mobile Only Ergonomic Bottom Dock (< 768px) -->
+    <nav class="mobile-quick-nav" aria-label="Navegación rápida móvil">
+        <a href="#perfil">
+            <i class="fa-solid fa-user-gear"></i>
+            <span class="lang-es">Perfil</span>
+            <span class="lang-en">Profile</span>
+        </a>
+        <a href="#proyectos">
+            <i class="fa-solid fa-diagram-project"></i>
+            <span class="lang-es">Proyectos</span>
+            <span class="lang-en">Projects</span>
+        </a>
+        <button type="button" class="m-cta" onclick="window.print()">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>PDF</span>
+        </button>
+        <a href="#habilidades">
+            <i class="fa-solid fa-code"></i>
+            <span>Stack</span>
+        </a>
+        <a href="https://wa.me/5493416874786?text=Hola%20Exequiel,%20vi%20tu%20CV%20online" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+    </nav>
+
     <!-- Interactive Script -->
     <script>
+        function toggleCompactMode() {
+            document.body.classList.toggle('compact-mode');
+            const icon = document.getElementById('compactIcon');
+            if (icon) {
+                icon.className = document.body.classList.contains('compact-mode')
+                    ? 'fa-solid fa-expand'
+                    : 'fa-solid fa-compress';
+            }
+        }
         function setLanguage(lang) {
             const html = document.documentElement;
             html.setAttribute('lang', lang);
